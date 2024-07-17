@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import useColorClass from "../hooks/useColorClass";
 import pi from "../assets/sounds/pi.mp3";
 import PropTypes from "prop-types";
+// eslint-disable-next-line no-unused-vars
+import React from 'react';
 
 NavBar.propTypes = {
   generalAudio: PropTypes.object.isRequired,
@@ -19,6 +21,7 @@ export default function NavBar({ generalAudio, setVolume, volume }) {
   const borderColorClass = useColorClass("border");
 
   const [timerActive, setTimerActive] = useState(false);
+  // eslint-disable-next-line no-unused-vars
   const [timerTime, setTimerTime] = useState(0);
   const [hours, setHours] = useState(0);
   const [minutes, setMinutes] = useState(0);
@@ -90,7 +93,7 @@ export default function NavBar({ generalAudio, setVolume, volume }) {
     }
 
     return () => clearInterval(interval);
-  }, [timerActive]);
+  }, [timerActive, audio]);
 
   const startTimer = () => {
     const totalSeconds = hours * 3600 + minutes * 60 + seconds;

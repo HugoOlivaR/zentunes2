@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+// eslint-disable-next-line no-unused-vars
+import React from 'react';
 
 export default function Hour() {
   // Paso 1: Crear un estado para la hora

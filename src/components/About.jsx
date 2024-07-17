@@ -1,5 +1,7 @@
 import { useState } from "react";
 import useColorClass from "../hooks/useColorClass";
+// eslint-disable-next-line no-unused-vars
+import React from 'react';
 
 export default function About() {
   const [tooltipMessage, setTooltipMessage] = useState("hugoliva158@gmail.com");

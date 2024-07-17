@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+// eslint-disable-next-line no-unused-vars
+import React, { useState, useEffect } from "react";
 import fireSound from "./assets/sounds/fire.mp3";
 import forestSound from "./assets/sounds/forest.mp3";
 import wavesSound from "./assets/sounds/waves.mp3";

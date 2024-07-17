@@ -1,5 +1,7 @@
 import PropTypes from "prop-types";
 import useColorClass from '../hooks/useColorClass';
+// eslint-disable-next-line no-unused-vars
+import React from 'react';
 
 PlayButton.propTypes = {
   onClick: PropTypes.func.isRequired,
