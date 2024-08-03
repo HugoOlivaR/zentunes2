@@ -37,6 +37,11 @@ function App() {
   const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
+    const handleEnded = () => {
+      audio.currentTime = 0;
+      audio.play();
+    };
+
     if (isPlaying) {
       const playPromise = audio.play();
       if (playPromise !== undefined) {
@@ -49,9 +54,15 @@ function App() {
             console.error("Error al intentar reproducir el audio:", error);
           });
       }
+
+      audio.addEventListener('ended', handleEnded);
     } else {
       audio.pause();
     }
+
+    return () => {
+      audio.removeEventListener('ended', handleEnded);
+    };
   }, [audio, isPlaying, currentSound.file]);
 
   const handleChange = (event) => {
